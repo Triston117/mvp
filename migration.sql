@@ -19,15 +19,17 @@ CREATE TABLE exercises (
 );
 
 CREATE TABLE workouts (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  workout_id INT PRIMARY KEY AUTO_INCREMENT,
   user_id INT NOT NULL,
   exercise_id INT NOT NULL,
   sets INT NOT NULL,
   reps INT NOT NULL,
-  weight INT NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users(id),
-  FOREIGN KEY (exercise_id) REFERENCES exercises(id)
+  exercise_name VARCHAR(255) NOT NULL,
+  calories_burned INT NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(user_id),
+  FOREIGN KEY (exercise_id) REFERENCES exercises(exercise_id)
 );
+
 
 CREATE TABLE calorie_intake (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
