@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Workout and Calorie Tracker</title>
+    <!-- Add your CSS stylesheets here -->
+  </head>
+  <body>
+    <header>
+      <h1>Workout and Calorie Tracker</h1>
+      <!-- Add your user profile icon here -->
+    </header>
+
+    <main>
+      <section>
+        <h2>Welcome to the Workout and Calorie Tracker!</h2>
+        <p>Start tracking your workouts and calorie intake today.</p>
+      </section>
+
+      <section>
+        <h2>Workouts and Exercises</h2>
+        <ul>
+          <li>Workouts List</li>
+          <li>Exercises List</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Calorie Intake</h2>
+        <p>Enter your calorie intake:</p>
+        <input type="number" id="calorie-intake-input" />
+        <button id="add-calorie-intake-btn">Add Calorie Intake</button>
+        <p>
+          Current calorie count: <span id="current-calorie-count">2000</span>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Workouts</a></li>
+          <li><a href="#">Exercises</a></li>
+          <li><a href="#">Calorie Intake</a></li>
+        </ul>
+        <div>
+          <a href="https://upperhand.com/50-motivational-workout-quotes/"></a>
+        </div>
+      </nav>
+      <p>Developed by [Triston Melton]</p>
+    </footer>
+
+    <!-- Add your JavaScript files here -->
+    <script>
+      const calorieIntakeInput = document.getElementById(
+        "calorie-intake-input"
+      );
+      const addCalorieIntakeBtn = document.getElementById(
+        "add-calorie-intake-btn"
+      );
+      const currentCalorieCount = document.getElementById(
+        "current-calorie-count"
+      );
+      let totalCalories = 2000;
+
+      addCalorieIntakeBtn.addEventListener("click", () => {
+        const calorieIntake = parseInt(calorieIntakeInput.value);
+        totalCalories += calorieIntake;
+        currentCalorieCount.innerText = totalCalories;
+        // Replace with your code to add calorie intake to database
+      });
+    </script>
+  </body>
+</html>
