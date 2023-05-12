@@ -1,0 +1,159 @@
+/* reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* set base font size and color */
+body {
+  font-size: 16px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* header styling */
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+/* main content styling */
+main {
+  margin: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* form input styling */
+input[type="number"] {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0077cc;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005ea8;
+}
+
+/* calorie intake section styling */
+#add-calorie-intake-btn {
+  margin-top: 10px;
+}
+
+#current-calorie-count {
+  font-weight: bold;
+}
+
+/* week header styling */
+.week-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.week-header li {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-right: 1px solid #ccc;
+  font-weight: bold;
+  color: #0077cc;
+  cursor: pointer;
+}
+
+.week-header li:last-child {
+  border-right: none;
+}
+
+.week-header li.active {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+/* footer styling */
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+  color: #666;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer nav li {
+  margin: 0 10px;
+}
+
+footer div a {
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+}
+
+footer div a:hover {
+  text-decoration: underline;
+  color: #0077cc;
+}
+
+/* section hide/show */
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

@@ -12,7 +12,7 @@ VALUES (1, '2023-05-11', 150),
        (1, '2023-05-11', 250),
        (1, '2023-05-11', 120),
        (2, '2023-05-11', 0),
-       (5, '2023-05-11', 0); -- add a workout with id 5
+       (5, '2023-05-11', 0);
 
 
 INSERT INTO workouts (user_id, date)
@@ -24,7 +24,7 @@ VALUES (2, '2023-05-11'),
 
 
 INSERT INTO workout_exercises (workout_id, exercise_id, sets, reps)
-VALUES (1, 2, 3, 10), -- change the exercise_id to 2
+VALUES (1, 2, 3, 10), 
        (2, 2, 4, 8),
        (3, 3, 5, 5),
        (4, 4, 3, 12),
