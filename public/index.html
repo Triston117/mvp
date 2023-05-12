@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="app.js"></script>
+
     <meta charset="UTF-8" />
     <title>Workout and Calorie Tracker</title>
   </head>
@@ -19,9 +21,12 @@
       <section>
         <h2>Workouts and Exercises</h2>
         <ul>
-          <li><a href="#">Workouts List</a></li>
-          <li><a href="#">Exercises List</a></li>
+          <li><a href="#" id="workouts-list-link">Workouts List</a></li>
+          <li><a href="#" id="exercises-list-link">Exercises List</a></li>
         </ul>
+        <div id="exercises-list-section" style="display: none">
+          <ul id="exercises-list"></ul>
+        </div>
       </section>
 
       <section>
@@ -32,6 +37,11 @@
         <p>
           Current calorie count: <span id="current-calorie-count">2000</span>
         </p>
+      </section>
+
+      <section>
+        <h2>Week</h2>
+        <ul id="week-list"></ul>
       </section>
     </main>
 
@@ -50,24 +60,5 @@
       </nav>
       <p>Developed by [Triston Melton]</p>
     </footer>
-
-    <script>
-      const calorieIntakeInput = document.getElementById(
-        "calorie-intake-input"
-      );
-      const addCalorieIntakeBtn = document.getElementById(
-        "add-calorie-intake-btn"
-      );
-      const currentCalorieCount = document.getElementById(
-        "current-calorie-count"
-      );
-      let totalCalories = 2000;
-
-      addCalorieIntakeBtn.addEventListener("click", () => {
-        const calorieIntake = parseInt(calorieIntakeInput.value);
-        totalCalories += calorieIntake;
-        currentCalorieCount.innerText = totalCalories;
-      });
-    </script>
   </body>
 </html>

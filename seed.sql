@@ -1,31 +1,42 @@
-USE fitness_tracker;
-
+\c fitness_tracker
 
 INSERT INTO users (username, password, email)
 VALUES ('user1', 'password1', 'user1@example.com');
 
-
-INSERT INTO exercises (exercise_name)
+INSERT INTO exercises (name)
 VALUES ('Bench Press'), ('Squats'), ('Deadlifts'), ('Shoulder Press');
 
+INSERT INTO workouts (user_id, date, calories_burned)
+VALUES (1, '2023-05-11', 150),
+       (1, '2023-05-11', 200),
+       (1, '2023-05-11', 250),
+       (1, '2023-05-11', 120),
+       (2, '2023-05-11', 0),
+       (5, '2023-05-11', 0); -- add a workout with id 5
 
-INSERT INTO workouts (user_id, exercise_id, sets, reps, exercise_name, calories_burned)
-VALUES (1, 1, 3, 10, 'Bench Press', 150),
-       (1, 2, 4, 8, 'Squats', 200),
-       (1, 3, 5, 5, 'Deadlifts', 250),
-       (1, 4, 3, 12, 'Shoulder Press', 120);
+
+INSERT INTO workouts (user_id, date)
+VALUES (2, '2023-05-11'),
+       (2, '2023-05-11'),
+       (2, '2023-05-11'),
+       (2, '2023-05-11'),
+       (2, '2023-05-11');
 
 
-INSERT INTO workouts (user_id, exercise_id, sets, reps, exercise_name)
-VALUES (2, 1, 4, 12, 'Incline Dumbbell Press', 150),
-       (2, 2, 3, 10, 'Hammer Curls', 100),
-       (2, 3, 3, 6, 'Deadlifts', 300),
-       (2, 4, 2, 12, 'Overhead Tricep Extension', 200),
-       (2, 5, 5, 8, 'Seated Cable Rows', 150);
+INSERT INTO workout_exercises (workout_id, exercise_id, sets, reps)
+VALUES (1, 2, 3, 10), -- change the exercise_id to 2
+       (2, 2, 4, 8),
+       (3, 3, 5, 5),
+       (4, 4, 3, 12),
+       (1, 5, 5, 8);
 
-INSERT INTO workouts (user_id, exercise_id, sets, reps, exercise_name)
-VALUES (3, 1, 5, 8, 'Machine Chest Press', 200),
-       (3, 2, 4, 12, 'Cable Hammer Curls' , 150),
-       (3, 3, 3, 10, 'Leg Press', 300),
-       (3, 4, 2, 15, 'Cable Tricep Pushdowns', 150),
-       (3, 5, 4, 10, 'Pull-ups', 200);
+
+
+INSERT INTO workout_exercises (workout_id, exercise_id, sets, reps)
+VALUES (5, 1, 4, 12),
+       (6, 2, 3, 10),
+       (7, 3, 3, 6),
+       (8, 4, 2, 12),
+       (9, 5, 5, 8);
+
+
